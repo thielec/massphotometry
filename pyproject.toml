@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "massphotometry"
+version = "0.1.0"
+description = "Python package for mass photometry data analysis - MP file reading and metadata handling"
+authors = [
+    { name = "Jan Christoph Thiele", email = "jan.thiele@chem.ox.ac.uk" },
+    { name = "Stephen Thorpe", email = "stephen.thorpe@chem.ox.ac.uk" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+keywords = ["mass photometry", "single molecule", "microscopy", "data analysis"]
+dependencies = [
+    "numpy",
+    "h5py",
+    "hdf5plugin",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "flake8",
+    "mypy",
+    "pre-commit",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/thielec/massphotometry"
+"Bug Tracker" = "https://github.com/thielec/massphotometry/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["massphotometry*"]
+
