@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/mp-test
+      url: https://test.pypi.org/p/massphotometry
     permissions:
       id-token: write
     steps:
