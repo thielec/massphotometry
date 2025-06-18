@@ -3,7 +3,11 @@ name: Publish Python 🐍 distribution 📦 to TestPyPI
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
+    paths:
+      - '**.py'
+    tags:
+      - 'v*'
 
 jobs:
   build:
